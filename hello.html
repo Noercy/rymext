@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+  <body>
+    <form id="submissionForm">
+        <input class="textInput" id="artistID" placeholder="Artist ID" type="text" required>
+        <div>
+            <input class="textInput" list="languages" placeholder="Language" type="text" id="langInput">
+            <button id="langClear" type="reset">Clear Lang</button>
+        </div>
+        <datalist id="languages"></datalist>
+        
+        <div class="radioBtns">
+            <input id="album" name="release-type" value="album" type="radio" checked="true">
+            <label for="album">Album</label>
+            <input id="EP" name="release-type" value="ep" type="radio">
+            <label for="EP">EP</label> 
+            <input id="single" name="release-type" value="single" type="radio">
+            <label for="single">Single</label>
+        </div>
+        
+        <div class="dlCheckbox">
+            <input id="dlImg" type="checkbox">
+            <label for="dlImg">Download Album Cover?</label>
+        </div>
+       
+
+        <button id="autoFill" type="button">Scan Page</button>
+        <div id="hiddenGuy">
+            <input id="title" placeholder="Title" type="text">
+            <input class="textInput" id="release-date" placeholder="Release Date" type="text">
+            <input class="textInput" id="label" placeholder="Label" type="text">
+            <input class="textInput" id="catalog-nr" placeholder="Catalog Number" type="text">
+            <textarea id="tracklist" placeholder="TrackList"></textarea>
+            <input id="creditlist" placeholder="Placeholder credits" value="[]"></textarea>
+    
+            <input class="textInput" id="source-url" placeholder="Source Url" type="text">
+            <button id="openUrl" type="submit">Submit to RYM</button>
+        </div>
+       
+    </form>
+    <script src="popup.js"></script>
+  </body>
+</html>
